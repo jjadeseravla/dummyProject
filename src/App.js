@@ -52,12 +52,12 @@ function App() {
           </Accordion>
         </section>
         <section>
-          <SearchableList items={PLACES}>
+          <SearchableList items={PLACES} itemKeyFn={(item) => item.id}>
             {(item) =>  <Place item={item} />}
           </SearchableList> 
           {/* inbetween searchableList is children which is expected to be a fn */}
           {/* this is called renderprops, where you pass a fn as children value and then that outputs received fn */}
-          <SearchableList items={['item1', 'item2']}>
+          <SearchableList items={['item1', 'item2']} itemKeyFn={(item) => item}>
             {(item) => item}
           </SearchableList>
         </section>
