@@ -8,6 +8,7 @@ import App from './App';
 import RootLayout from './routes/RootLayout';
 import MainPage from './components/Users/MainPage';
 import Countries from './components/countries/Countries';
+import Calendar from './components/calendar/Calendar.tsx';
 
 // const router = createBrowserRouter([
 //   {
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
   {
     path: '/', element: <RootLayout />, children: [
       { path: '/', element: <App /> },
-      { path: '/all', element: <Countries />},
+      { path: '/all', element: <Countries /> },
+      {path: '/calendar', element: <Calendar/>},
       { path: '/capital/:capital', element: <Countries/>},
       {path: '/create-user', element: <MainPage />}, // Update route to render AddUser component
       { path: '/dummy', element: <h1>go to localhost:3000 slash dummy and you'll see this text</h1> }
